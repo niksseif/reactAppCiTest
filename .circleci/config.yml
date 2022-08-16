@@ -32,6 +32,6 @@ jobs:
       # run tests!
       - run: npm test
 
-      - run: run-script build
+      - run: npm run-script build
  
 
