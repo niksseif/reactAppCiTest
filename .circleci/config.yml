@@ -27,3 +27,9 @@ jobs:
       - run: npm test
 
       - run: npm build
+  orbs:
+    heroku: circleci/heroku@1.2.6
+  workflows:
+    heroku_deploy:
+      jobs:
+        - heroku/deploy-via-git
