@@ -28,7 +28,7 @@ jobs:
       # run tests!
       - run: npm test
 
-      - run: yarn build
+      - run: npm build
  
 workflows:
   heroku_deploy:
