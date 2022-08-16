@@ -5,7 +5,7 @@ orbs:
   heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
 
 jobs:
-  build-and-test:
+  build_and_test:
     executor: node/default
     steps:
       - checkout
