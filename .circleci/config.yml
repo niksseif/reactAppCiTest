@@ -26,7 +26,7 @@ jobs:
       # run tests!
       - run: npm test
 
-      - run: npm build
+      - run: npm run build
   orbs:
     heroku: circleci/heroku@1.2.6
   workflows:
