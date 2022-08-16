@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  heroku: circleci/heroku@1.2.6
 jobs:
   build:
     docker:
@@ -27,8 +29,7 @@ jobs:
       - run: npm test
 
       - run: npm run build
-  orbs:
-    heroku: circleci/heroku@1.2.6
+ 
   workflows:
     heroku_deploy:
       jobs:
