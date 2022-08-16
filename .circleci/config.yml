@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.7
-  heroku: circleci/heroku@x.y # Use the Heroku orb in your config
+  heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
 
 jobs:
   build-and-test:
