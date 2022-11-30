@@ -7,8 +7,18 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
+      - run: 
+          name: Update NPM
+          command: "sudo npm install -g npm"
+          - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
       - run:
           name: Run tests
           command: npm test
